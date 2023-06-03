@@ -12,6 +12,8 @@ It is a simple tool that can help plot charts and analyse data. It has the follo
 7. ……
 
 ## Examples 
+Video url: [Multidimensional chart](https://www.bilibili.com/video/BV1JX4y1a7pG/?spm_id_from=333.999.0.0&vd_source=f62bb9a0433172c07fff04f387f0ebb7) 
+
 DataTable
 ![DataTable](./examples/DataTableExample.gif)
 
