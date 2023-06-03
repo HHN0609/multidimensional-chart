@@ -56,6 +56,7 @@ import { onMounted, ref, computed, watch } from "vue";
 import { AnalyticType } from "@/stores/types";
 import useInputData from "@/stores/inputData";
 import TableHeadChart from "./tableHeadChart.vue";
+import { isEmptyCell } from "@/utils";
 const fillEmpty = ref(false);
 const inputData = useInputData();
 
@@ -104,9 +105,7 @@ const getValueCount = computed(() => {
     const key = props.fieldName.toString();
     let ans = 0;
     for(let value of inputData.inputData) {
-        if(value[key] !== null && value[key] !== undefined) {
-            ans++;
-        } else if (useNull.value === true) {
+        if(!isEmptyCell(value[key])) {
             ans++;
         }
     }
@@ -114,12 +113,11 @@ const getValueCount = computed(() => {
 });
 
 const getColDatas = computed(() => {
+    const key = props.fieldName.toString();
     let ans = [];
     for(let value of inputData.inputData){
-        if(value[props.fieldName] !== null && value[props.fieldName] !== undefined){
-            ans.push(value[props.fieldName]);
-        } else if(useNull.value === true) {
-            ans.push(replaceValue.value);
+        if(!isEmptyCell(value[key])){
+            ans.push(value[key]);
         }
     }
     return ans;

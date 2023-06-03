@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { WatchStopHandle, onMounted, onUnmounted, ref, watchEffect } from 'vue';
-import vegaEmbed from 'vega-embed';
+import vegaEmbed, { VisualizationSpec } from 'vega-embed';
 import { SemanticType } from "@/stores/types";
 import { View } from 'vega';
 
@@ -35,7 +35,7 @@ onMounted(() => {
       },
       
     };
-    vegaEmbed(headChart.value, spec).then((value) => {
+    vegaEmbed(headChart.value, spec as string | VisualizationSpec).then((value) => {
       view = value.view;
     });
   });    

@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { ListType, MarkType, AggregateMethod } from "@/stores/types";
+import { ListType, MarkType, AggregateMethod, SemanticType } from "@/stores/types";
 import { WatchStopHandle, computed, onMounted, onUnmounted, watchEffect, ref } from "vue";
 import vegaEmbed from "vega-embed";
 import useInputData from "@/stores/inputData";
@@ -17,7 +17,7 @@ type Legend = ListType;
 type VegaEncodingConfig = {
     field: string,
     title: string,
-    type: "quantitative" | "nominal",
+    type: SemanticType,
     aggregate?: AggregateMethod | null,
     axis?: any,
     stack?: "normalize" | "" | "zero" | "center",
