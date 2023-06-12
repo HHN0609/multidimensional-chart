@@ -29,4 +29,5 @@ Chart2
 Chart3 
 ![Chart3](./examples/chart3.png)
 
-
+## Reference 
+The product's design mainly refers to [Rath](https://github.com/Kanaries/Rath) and [GraphicWalker](https://github.com/Kanaries/graphic-walker)
