@@ -3,7 +3,7 @@
 This is my personal project for graduating from university. 
 
 It is a simple tool that can help plot charts and analyse data. It has the following functions.  
-1. Import files, lile `.xls`、`.xlsx`、`.csv`、`.json`.
+1. Import files, like `.xls`、`.xlsx`、`.csv`、`.json`.
 2. Infer data type automatically.
 3. Calculate general statistical values.
 4. Fill empty values.
